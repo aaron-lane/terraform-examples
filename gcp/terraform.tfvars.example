@@ -1,0 +1,7 @@
+gcp_credentials = <<CREDS
+{
+    // replace this with the contents of a service account credential's file
+}
+CREDS
+
+gcp_project = <project name from credentials>
