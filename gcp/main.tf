@@ -4,7 +4,7 @@ resource "google_compute_instance" "standard1" {
   zone         = "us-central1-a"
 
   boot_disk {
-    auto_delete = true  
+    auto_delete = true
   }
 
   network_interface {}
@@ -18,12 +18,7 @@ resource "google_compute_disk" "standard" {
   size = 40
 }
 
-variable "gcp_credentials" {}
-variable "gcp_project" {}
-
 provider "google" {
-  credentials = var.gcp_credentials
-  project     = var.gcp_project
   region      = "us-central1"
   zone        = "us-central1-c"
 }
