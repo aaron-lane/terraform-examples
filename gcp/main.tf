@@ -3,7 +3,9 @@ resource "google_compute_instance" "standard1" {
   machine_type = "n1-standard-1"
   zone         = "us-central1-a"
 
-  boot_disk {}
+  boot_disk {
+    auto_delete = true  
+  }
 
   network_interface {}
 }
